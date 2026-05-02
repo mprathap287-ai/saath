@@ -248,6 +248,92 @@ function ResultContent() {
           </button>
         </div>
 
+        {/* Crisis Support - Only show for Critical scores */}
+        {status === "critical" && (
+          <div className="animate-fade-up-delay-3">
+            <div className="rounded-3xl border bg-[#1a1625] p-6 border-[#c084a0]/20">
+              <div className="text-center mb-6">
+                <h3 className="text-xl font-semibold text-[#ffffff] mb-2">
+                  {t("You don't have to face this alone.", "आपको अकेले इसका सामना करने की ज़रूरत नहीं है।")}
+                </h3>
+                <p className="text-[#a89db5] text-sm">
+                  {t("Talking to someone helps. These are free, confidential helplines in India:", "किसी से बात करने से मदद मिलती है। ये भारत में मुफ़्त, गोपनीय हेल्पलाइनें हैं:")}
+                </p>
+              </div>
+              
+              <div className="space-y-3">
+                {/* iCall */}
+                <div className="bg-[#0f0d14] border border-[#c084a0]/15 rounded-2xl p-4">
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-[#c084a0] rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="flex-1">
+                      <h4 className="text-[#ffffff] font-medium text-sm mb-1">
+                        {t("iCall — Psychological counselling", "iCall — मनोवैज्ञानिक परामर्श")}
+                      </h4>
+                      <p className="text-[#a89db5] text-xs mb-2">
+                        <a href="tel:9152987821" className="hover:text-[#ffffff] transition-colors underline decoration-[#c084a0]/30 underline-offset-2">
+                          9152987821
+                        </a>
+                      </p>
+                      <p className="text-[#8b7fa8] text-xs">
+                        {t("Mon–Sat, 8am–10pm", "सोम–शनि, सुबह 8 बजे–रात 10 बजे")}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Vandrevala Foundation */}
+                <div className="bg-[#0f0d14] border border-[#c084a0]/15 rounded-2xl p-4">
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-[#c084a0] rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="flex-1">
+                      <h4 className="text-[#ffffff] font-medium text-sm mb-1">
+                        {t("Vandrevala Foundation — 24/7 mental health support", "वांद्रेवाला फाउंडेशन — 24/7 मानसिक स्वास्थ्य सहायता")}
+                      </h4>
+                      <p className="text-[#a89db5] text-xs mb-2">
+                        <a href="tel:1860-2662-345" className="hover:text-[#ffffff] transition-colors underline decoration-[#c084a0]/30 underline-offset-2">
+                          1860-2662-345
+                        </a>
+                      </p>
+                      <p className="text-[#8b7fa8] text-xs">
+                        {t("Available 24/7", "24/7 उपलब्ध")}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* iCall WhatsApp */}
+                <div className="bg-[#0f0d14] border border-[#c084a0]/15 rounded-2xl p-4">
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-[#c084a0] rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="flex-1">
+                      <h4 className="text-[#ffffff] font-medium text-sm mb-1">
+                        {t("iCall WhatsApp — Chat if you can't call", "iCall WhatsApp — अगर कॉल नहीं कर सकते तो चैट करें")}
+                      </h4>
+                      <p className="text-[#a89db5] text-xs mb-2">
+                        <a href="https://wa.me/919152987821" target="_blank" rel="noopener noreferrer" className="hover:text-[#ffffff] transition-colors underline decoration-[#c084a0]/30 underline-offset-2">
+                          wa.me/919152987821
+                        </a>
+                      </p>
+                      <p className="text-[#8b7fa8] text-xs">
+                        {t("Message anytime", "कभी भी मैसेज करें")}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Note about Saath */}
+              <div className="mt-6 pt-4 border-t border-[#c084a0]/10">
+                <p className="text-center text-[#8b7fa8] text-xs leading-relaxed">
+                  {t("Saath is not a crisis service. If you are in danger, please call 112.", 
+                     "साथ कोई संकट सेवा नहीं है। यदि आप खतरे में हैं, कृपया 112 पर कॉल करें।")}
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* Disclaimer */}
         <p className="text-center text-white/20 text-xs leading-relaxed">
           {t(
